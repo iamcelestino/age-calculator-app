@@ -12,12 +12,21 @@
     <div class="wrapper">
       <div class="birthday">
         <form action="">
-          <label for="">day</label>
-          <input type="text" class="day" placeholder="DD">
-          <label for="">months</label>
-          <input type="text" class="month" placeholder="MM">
-          <label for="">year</label>
-          <input type="text" class="year" placeholder="YYYY">
+          <div>
+            <label for="day">day</label>
+            <input type="text" class="day" id="day"  name="day"   placeholder="DD">
+            <p class="error__message">this field is required</p>
+          </div>
+          <div>
+            <label for="month">months</label>
+            <input type="text" class="month" id="month"  name="month"  placeholder="MM"><br>
+            <p class="error__message">this field is required</p>
+          </div>
+          <div>
+            <label for="year">year</label>
+            <input type="text" class="year" id="year"  name="year"    placeholder="YYYY">
+            <p class="error__message">this field is required</p>
+          </div>
         </form>
       </div>
       <div class="ilustration"></div>
