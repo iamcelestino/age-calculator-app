@@ -4,6 +4,7 @@ const currentAge = document.querySelector(".age");
 const errorMessage = document.querySelectorAll(".error__message");
 const validErrorMessage = document.querySelectorAll(".valid__error");
 const inputs = document.querySelectorAll("input");
+const descriptions = document.querySelectorAll(".description");
 
 const calculateAge = (dayOfBirth, monthOfBirth, yearOfBirth) => {
 
@@ -22,20 +23,47 @@ const calculateAge = (dayOfBirth, monthOfBirth, yearOfBirth) => {
     }
     else if((dayOfBirth > 31)) {
         validErrorMessage[0].classList.remove("valid__error");
+
+        descriptions.forEach(description => {
+            description.style.color = "hsl(0, 100%, 67%)"
+        } );
+
+        inputs.forEach(item => {
+            item.classList.add("inputError");
+        });
     } 
     else if((monthOfBirth > 12)) {
         validErrorMessage[1].classList.remove("valid__error");
+
+        descriptions.forEach(description => {
+            description.style.color = "hsl(0, 100%, 67%)"
+        } )
+
+        inputs.forEach(item => {
+            item.classList.add("inputError");
+        })
     }
     else if((yearOfBirth  > new Date().getFullYear())) {
-        
         validErrorMessage[2].classList.remove("valid__error");
+
+        descriptions.forEach(description => {
+            description.style.color = "hsl(0, 100%, 67%)"
+        } )
+        
+        inputs.forEach(item => {
+            item.classList.add("inputError");
+        })
     }
     else if((dayOfBirth === "") || (monthOfBirth === "") || (yearOfBirth === "")) {
         errorMessage.forEach(error => {
             error.classList.remove("error__message");
+
+            descriptions.forEach(description => {
+                description.style.color = "hsl(0, 100%, 67%)"
+            } );
             
             inputs.forEach(item => {
-                item.classList.add("inputError")
+                item.classList.add("inputError");
             })
         })
     } 
