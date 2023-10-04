@@ -18,6 +18,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     background-color: var(--neutral-Light-grey);
     display: flex;
@@ -29,14 +30,14 @@ body {
 }
 
 .wrapper {
-    width: 90%;
+    width: 95%;
     margin: auto;
     background-color: var(--neutral-White);
-    padding: 3rem 1rem;
+    padding: 3rem 3rem;
     border-radius: 20px 20px 90px 20px;
 }
 
-form {
+.user___data{
     display: flex;
     justify-content: space-between;
 }
@@ -44,15 +45,20 @@ form {
 label {
     display: block;
 }
+
 input {
-    width:55%;
-    padding: 0.8rem;
+    width: 80%;
+    padding: 1rem;
     border-radius: 5px;
     border: 1px solid var(--neutral-Light-grey);
 }
 
+.inputError {
+    border: 2px solid var(--primary-Light-red);
+}
+
 .ilustration {
-    border: 1px solid var(--neutral-Light-grey);
+    border-top: 1px solid var(--neutral-Light-grey);
     margin-top: 4rem;
 }
 
@@ -65,13 +71,16 @@ img {
     padding: 0.4rem;
 }
 
+button {
+    display: none;
+}
+
 .img {
     text-align: center;
 }
 
 img:hover {
     background-color: var(--neutral-off-black);
-    transition: all 1s cubic-bezier(0.5, 0.05, 0.85, 0.06);
 }
 
 .age p {
@@ -83,10 +92,19 @@ span {
     color: var(--primary-Purple);
 }
 
-.error__message {
+label {
+    display: block;
+}
+
+.error {
     font-style: italic;
     color: var(--primary-Light-red);
-    font-size: 10px;
+    font-size: 9px;
+}
+
+.error__message,
+.valid__error {
+    display: none;
 }
 
 .attribution { 
